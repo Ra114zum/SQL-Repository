@@ -1,3 +1,5 @@
+## This Code was Written in the MySQL Dialect of the SQL Tree, If it gives any syntax error make sure you are running the right IDE 
+
 DROP TABLE IF EXISTS departments,employee;
 
 ##I use the Term Emp before Names and Rnak to avoid any confusion in the code as this is being written in MySQL
@@ -50,9 +52,15 @@ VALUES(3,'Finance');
 INSERT INTO departments
 VALUES(4,'Management');
 
-## These ABOVE are all the Departments Added 4 in total with each unique ID
+## These ABOVE are all the Departments Added 4 in total with each unique ID, You can View them here
 
+SELECT *
 
+FROM employee;	
+	
+SELECT *
+
+FROM departments;
 
 SELECT employee.Emp_Names,departments.DeptName
 
