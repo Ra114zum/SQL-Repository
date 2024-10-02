@@ -86,14 +86,20 @@ SET departments.DeptName = 'Fin & Acc'
 
 WHERE departments.DeptID = 3; 
 
-## I updated the Finance Deopartment Name to Fin & Acc as the other Finance and Accounting Name was too long
+## I updated the Finance Deopartment Name to Fin & Acc as the other Finance and Accounting Name was too long and messy
 
 DELETE FROM employee
 
 WHERE EmployeeID=7;
 
-## I had to use the employeeid since MySQL doesnt allow updates without Key Columns mentioned
+## I had to use the employeeid since MySQL doesnt allow updates without Key Columns mentioned, you can view the changes here
 
+SELECT employee.Emp_Names,departments.DeptID,departments.DeptName,employee.ManagerID
+
+FROM employee
+JOIN departments
+
+ON employee.DeptID=departments.DeptID;
 
 SELECT departments.DeptName,SUM(Salary) AS 'Total_Salary'
 
